@@ -1,0 +1,52 @@
+{
+    "id": "hot-sauce-throwdown",
+    "title": "Hot Sauce Throwdown",
+    "date": "2036-08-08T00:00:00+00:00",
+    "location": "Center stage, by the crosswalk",
+    "poster": {
+        "alt": "Crates of red, orange and green peppers",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "4456305d",
+        "height": 1200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "05-peppers.jpg",
+        "palette": [
+            "#c9d4ba",
+            "#de2f13",
+            "#574821",
+            "#b9923c",
+            "#ab9a9e"
+        ],
+        "size": 534565,
+        "tags": [],
+        "uploadDate": "2026-11-06T07:19:00+00:00",
+        "width": 1800
+    },
+    "summary": "Twelve home cooks, one very brave panel of judges and all the cold milk you can hold. Tasting cups are a dollar, and every cup is a vote.",
+    "tickets": "https://tickets.example/hot-sauce",
+    "schedule": {
+        "row_1": {
+            "id": "row_1",
+            "time": "17:00",
+            "act": "Tasting table opens"
+        },
+        "row_2": {
+            "id": "row_2",
+            "time": "19:00",
+            "act": "The judging"
+        },
+        "row_3": {
+            "id": "row_3",
+            "time": "20:30",
+            "act": "Winner takes the jar"
+        }
+    }
+}

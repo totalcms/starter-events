@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% block seo %}{{ cms.seo.head(page|default(null)) }}{% endblock %}
+	{{ cms.assetsHead() }}
+	{{ cms.builder.css('market/market.css') }}
+	<style>
+		:root {
+			--paper: {{ cms.color('paper') | hex }};
+			--paper-deep: {{ cms.color('paper-deep') | hex }};
+			--ink: {{ cms.color('ink') | hex }};
+			--lantern: {{ cms.color('lantern') | hex }};
+		}
+	</style>
+	{% block head %}{% endblock %}
+</head>
+<body>
+	<header>
+		<a href="/">{{ cms.config('siteName') }}</a>
+		<nav>
+			{% for p in cms.builder.nav() %}
+				<a href="{{ p.route }}">{{ p.title }}</a>
+			{% endfor %}
+		</nav>
+	</header>
+
+	<main>
+		{% block content %}{% endblock %}
+	</main>
+
+	<footer>
+		<p>{{ cms.config('siteName') }}</p>
+		<p>Fridays, May to October, 5 to 10 p.m. · hello@lanternrow.example · 555-0142</p>
+		<p>{{ cms.badge.text({theme: 'mono'}) }}</p>
+	</footer>
+
+	{{ cms.assetsBody() }}
+</body>
+</html>

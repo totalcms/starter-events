@@ -1,0 +1,18 @@
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+<h1>News</h1>
+
+{% set posts = cms.collection.query('blog', {
+	filter: [{property: 'draft', operator: 'isfalse'}],
+	sort: 'date:desc',
+}).objects %}
+
+{% for post in posts %}
+	<article>
+		{{ cms.render.image(post, {w: 800, h: 560, fit: 'crop-focalpoint'}, {collection: 'blog'}) }}
+		<h2><a href="{{ cms.collection.objectUrl('blog', post) }}">{{ post.title }}</a></h2>
+		{{ post.summary }}
+	</article>
+{% endfor %}
+{% endblock %}

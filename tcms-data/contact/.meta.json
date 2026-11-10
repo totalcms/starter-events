@@ -1,0 +1,72 @@
+{
+    "id": "contact",
+    "schema": "contact",
+    "name": "Contact",
+    "description": "A collection of contact objects that conform to the contact schema.",
+    "url": "",
+    "category": "",
+    "labelPlural": "",
+    "labelSingular": "",
+    "groups": [],
+    "publicOperations": [
+        "create"
+    ],
+    "requireBotProtection": false,
+    "sortBy": "",
+    "reverseSort": false,
+    "prettyUrl": false,
+    "singleton": false,
+    "format": "json",
+    "publicRegistration": false,
+    "requireEmailVerification": false,
+    "registrationGroups": [],
+    "ownerProperty": "",
+    "ownerCollection": "",
+    "accessCollection": "",
+    "queueRebuildOnSave": false,
+    "count": 2,
+    "totalObjects": 0,
+    "lastUpdated": "2026-11-10T17:01:05+00:00",
+    "updated": "2026-11-06T07:24:37+00:00",
+    "sitemap": {
+        "enabled": false,
+        "date": "",
+        "frequency": "",
+        "priority": 0,
+        "include": "",
+        "exclude": ""
+    },
+    "feed": {
+        "enabled": false,
+        "name": "",
+        "language": "",
+        "description": "",
+        "link": "",
+        "image": "",
+        "include": "",
+        "exclude": "",
+        "limit": 25,
+        "hidden": "",
+        "title": "",
+        "date": "",
+        "content": "",
+        "author": "",
+        "media": ""
+    },
+    "mcp": {
+        "searchProvider": "default",
+        "access": "admin",
+        "description": "",
+        "titleProperty": "",
+        "resource": false,
+        "tools": []
+    },
+    "seo": {
+        "type": "",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": ""
+    }
+}

@@ -1,0 +1,24 @@
+{% extends 'layouts/default.twig' %}
+
+{% block seo %}{{ cms.seo.head(object) }}{% endblock %}
+
+{% block content %}
+<h1>{{ object.title }}</h1>
+
+<figure>{{ cms.render.image(object, {w: 1400, h: 640, fit: 'crop'}, {collection: 'events', property: 'poster'}) }}</figure>
+
+<div>
+	<p>{{ object.date|date('l, F j') }}. {{ object.location }}.</p>
+	<p>{{ object.summary }}</p>
+</div>
+
+<h2>The schedule</h2>
+<dl>
+	{% for item in object.schedule %}
+		<dt>{{ item.time|date('g:i a') }}</dt>
+		<dd>{{ item.act }}</dd>
+	{% endfor %}
+</dl>
+
+<p><a class="button" href="{{ object.tickets }}">Get tickets</a></p>
+{% endblock %}

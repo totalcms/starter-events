@@ -1,0 +1,52 @@
+{
+    "id": "opening-night",
+    "title": "Opening Night",
+    "date": "2036-05-02T00:00:00+00:00",
+    "location": "The whole Row, Mill Street to the rail spur",
+    "poster": {
+        "alt": "Star-shaped lanterns throwing patterns of light",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "eec00d4d",
+        "height": 1200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "02-star-lanterns.jpg",
+        "palette": [
+            "#ae4514",
+            "#e5d08a",
+            "#662e14",
+            "#061c1c",
+            "#d7a037"
+        ],
+        "size": 465092,
+        "tags": [],
+        "uploadDate": "2026-11-06T07:19:00+00:00",
+        "width": 1800
+    },
+    "summary": "The first market of the season, with every stall, every lantern and the Mill Street Brass Band at 7. Kids paint paper lanterns for free at the top of the Row.",
+    "tickets": "https://tickets.example/opening-night",
+    "schedule": {
+        "row_1": {
+            "id": "row_1",
+            "time": "17:00",
+            "act": "Stalls open"
+        },
+        "row_2": {
+            "id": "row_2",
+            "time": "19:00",
+            "act": "Mill Street Brass Band"
+        },
+        "row_3": {
+            "id": "row_3",
+            "time": "21:00",
+            "act": "Last call for dumplings"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+<h1>Contact</h1>
+
+<div>
+	<p>Want a stall, have a question, or lost a hat on the Row? Send us a note. A real person reads every one, usually the same week.</p>
+</div>
+
+<p>Stall applications open every January. Tell us what you sell, how much space you need and whether you need power, and we'll answer by the end of February.</p>
+
+{{ cms.form.builder('contact', {
+	addOnly: true,
+	botProtection: true,
+	save: 'Send it',
+	newActions: [{action: 'redirect', link: '/thanks'}],
+}) }}
+{% endblock %}

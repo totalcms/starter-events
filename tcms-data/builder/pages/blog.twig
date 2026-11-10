@@ -1,0 +1,14 @@
+{% extends 'layouts/default.twig' %}
+
+{% block seo %}{{ cms.seo.head(object) }}{% endblock %}
+
+{% block content %}
+<h1>{{ object.title }}</h1>
+
+<figure>{{ cms.render.image(object, {w: 1400, h: 640, fit: 'crop-focalpoint'}, {collection: 'blog'}) }}</figure>
+
+<div>{{ object.content }}</div>
+
+<h2>Photos from the Row</h2>
+{{ cms.render.gallery('market-photos', {w: 600, h: 440, fit: 'crop'}) }}
+{% endblock %}

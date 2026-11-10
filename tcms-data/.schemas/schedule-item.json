@@ -1,0 +1,47 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/schedule-item.json",
+    "type": "object",
+    "id": "schedule-item",
+    "description": "One row of an event schedule: a time and what happens.",
+    "properties": {
+        "id": {
+            "field": "id",
+            "label": "ID",
+            "placeholder": "Enter a unique identifier",
+            "help": "The unique identifier",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json"
+        },
+        "time": {
+            "field": "time",
+            "label": "Time",
+            "help": "When this part of the night starts.",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/time.json"
+        },
+        "act": {
+            "field": "text",
+            "label": "What happens",
+            "help": "A few words, like Doors or Mill Street Brass Band.",
+            "type": "string",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        }
+    },
+    "required": [
+        "id"
+    ],
+    "index": [
+        "id"
+    ],
+    "updated": "2026-11-06T18:53:32+00:00"
+}

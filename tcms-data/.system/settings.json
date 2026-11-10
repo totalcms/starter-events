@@ -1,0 +1,12 @@
+{
+    "i18n": {
+        "default": "en_US"
+    },
+    "siteName": "Lantern Row Market",
+    "sentry": false,
+    "env": "prod",
+    "timezone": "UTC",
+    "notfound": "/404",
+    "maxDownloadSize": 2048,
+    "appLogLevel": "info"
+}

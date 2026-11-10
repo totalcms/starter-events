@@ -1,0 +1,114 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/event.json",
+    "type": "object",
+    "id": "event",
+    "description": "One night at the market: what it is, when, where, and where to buy a ticket.",
+    "properties": {
+        "id": {
+            "field": "id",
+            "label": "ID",
+            "placeholder": "Enter a unique identifier",
+            "help": "The unique identifier",
+            "settings": {
+                "autogen": "${title}"
+            },
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json"
+        },
+        "title": {
+            "field": "text",
+            "label": "Event name",
+            "help": "The name of the night, as it goes on the poster.",
+            "type": "string",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        },
+        "date": {
+            "field": "date",
+            "label": "Date",
+            "help": "The day it happens. The events page hides it once this date has passed.",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json"
+        },
+        "location": {
+            "field": "text",
+            "label": "Location",
+            "help": "Where on the Row people should go.",
+            "type": "string",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        },
+        "poster": {
+            "field": "image",
+            "label": "Poster",
+            "help": "A wide photo for the top of the event page.",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/image.json"
+        },
+        "summary": {
+            "field": "textarea",
+            "label": "Summary",
+            "help": "One or two plain sentences for the events list.",
+            "type": "string",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        },
+        "tickets": {
+            "field": "url",
+            "label": "Ticket link",
+            "help": "The full web address where people buy tickets.",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/url.json"
+        },
+        "schedule": {
+            "field": "deck",
+            "label": "Schedule",
+            "help": "Add one row for each part of the night, in order.",
+            "settings": {
+                "deckItemLabel": "${time} ${act}"
+            },
+            "schemaref": "https:\/\/www.totalcms.co\/schemas\/custom\/schedule-item.json",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/deck.json",
+            "patternProperties": {
+                "^[a-zA-Z]\\w*$": {
+                    "$ref": "https:\/\/www.totalcms.co\/schemas\/custom\/schedule-item.json"
+                }
+            }
+        }
+    },
+    "required": [
+        "id"
+    ],
+    "index": [
+        "id",
+        "date",
+        "location",
+        "poster",
+        "summary",
+        "title"
+    ],
+    "updated": "2026-11-06T07:20:33+00:00"
+}

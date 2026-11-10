@@ -1,0 +1,19 @@
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+<h1>Events</h1>
+
+{% set events = cms.collection.query('events', {
+	filter: [{property: 'date', operator: 'futureToday'}],
+	sort: 'date',
+}).objects %}
+
+{% for event in events %}
+	<article>
+		{{ cms.render.image(event, {w: 800, h: 560, fit: 'crop'}, {collection: 'events', property: 'poster'}) }}
+		<h2><a href="{{ cms.collection.objectUrl('events', event) }}">{{ event.title }}</a></h2>
+		<time>{{ event.date|date('l, F j') }}</time>
+		<p>{{ event.summary }}</p>
+	</article>
+{% endfor %}
+{% endblock %}

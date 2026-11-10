@@ -1,0 +1,63 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/contact.json",
+    "type": "object",
+    "id": "contact",
+    "description": "A message someone sent through the contact form.",
+    "properties": {
+        "id": {
+            "field": "id",
+            "label": "ID",
+            "placeholder": "Enter a unique identifier",
+            "help": "The unique identifier",
+            "settings": {
+                "autogen": "${name}-${now}"
+            },
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json"
+        },
+        "name": {
+            "field": "text",
+            "label": "Your name",
+            "help": "Who the message is from.",
+            "type": "string",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        },
+        "email": {
+            "field": "email",
+            "label": "Email",
+            "help": "Where to send the reply.",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/email.json"
+        },
+        "message": {
+            "field": "textarea",
+            "label": "Message",
+            "help": "What they want to tell the market.",
+            "type": "string",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        }
+    },
+    "required": [
+        "id"
+    ],
+    "index": [
+        "id",
+        "name",
+        "email",
+        "message"
+    ],
+    "updated": "2026-11-06T07:24:33+00:00"
+}

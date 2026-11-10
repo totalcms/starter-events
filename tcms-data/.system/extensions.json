@@ -1,0 +1,137 @@
+{
+    "totalcms/ab-split": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/algolia-search": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/docs": {
+        "enabled": true,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": {
+            "mcp:tools": true,
+            "mcp:prompts": true
+        },
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": true,
+        "approvedFindings": null
+    },
+    "totalcms/geo-redirect": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/maintenance": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/podcast": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/protect": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/pushover": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/scheduled": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/stock-photos": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/webmcp": {
+        "enabled": false,
+        "installed_at": "2026-11-06T06:51:49+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/client-help": {
+        "enabled": false,
+        "installed_at": "2026-11-06T18:53:32+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    }
+}

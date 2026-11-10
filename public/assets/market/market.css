@@ -1,0 +1,449 @@
+/* Lantern Row Market
+ * One plain stylesheet. No build step, no framework.
+ * It styles ordinary HTML, so your templates can stay short.
+ * Change the colors and fonts here and the whole site follows. */
+
+@font-face {
+	font-family: "Bowlby One";
+	src: url("fonts/bowlby-one.woff2") format("woff2");
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Karla";
+	src: url("fonts/karla.woff2") format("woff2");
+	font-weight: 200 800;
+	font-display: swap;
+}
+
+:root {
+	--paper: #f7f3ea;
+	--paper-deep: #ece4d3;
+	--ink: #0c3a4e;
+	--lantern: #ffc62e;
+	--display: "Bowlby One", "Arial Black", sans-serif;
+	--text: "Karla", system-ui, sans-serif;
+	--edge: clamp(1.25rem, 4vw, 3.5rem);
+	--wide: 76rem;
+	--gutter: max(var(--edge), calc(50vw - var(--wide) / 2 + var(--edge)));
+}
+
+/* The page */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: var(--paper);
+	color: var(--ink);
+	font: 400 1.125rem/1.55 var(--text);
+}
+
+main {
+	flex: 1;
+	width: 100%;
+	max-width: var(--wide);
+	margin-inline: auto;
+	padding: 0 var(--edge) clamp(4rem, 9vw, 8rem);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Type */
+
+h1, h2, h3 {
+	margin: 0;
+	font-family: var(--display);
+	font-weight: 400;
+	line-height: 1;
+	text-wrap: balance;
+}
+
+h2 {
+	font-size: clamp(1.7rem, 3.4vw, 2.75rem);
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+a {
+	color: inherit;
+	text-decoration-color: var(--lantern);
+	text-decoration-thickness: 0.2em;
+	text-underline-offset: 0.16em;
+}
+
+a:hover {
+	background: var(--lantern);
+	color: var(--ink);
+}
+
+:focus-visible {
+	outline: 3px solid var(--ink);
+	outline-offset: 3px;
+}
+
+/* The bar across the top */
+
+body > header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 0.25rem 2rem;
+	padding: 1rem var(--gutter);
+	background: var(--ink);
+	color: var(--paper);
+}
+
+body > header > a {
+	font-family: var(--display);
+	font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+	color: var(--lantern);
+	text-decoration: none;
+}
+
+body > header nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 1.5rem;
+}
+
+body > header nav a {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+body > header a:hover {
+	background: var(--lantern);
+	color: var(--ink);
+}
+
+/* The page title sits on a block of lantern yellow, edge to edge */
+
+main > h1:first-child {
+	width: 100vw;
+	margin: 0 calc(50% - 50vw) clamp(2.5rem, 6vw, 5rem);
+	padding: clamp(2.5rem, 7vw, 5.5rem) var(--gutter);
+	background: var(--lantern);
+	font-size: clamp(3rem, 12vw, 9.5rem);
+	line-height: 0.92;
+	letter-spacing: -0.01em;
+}
+
+/* Lists of posts and events: picture on one side, words on the other */
+
+main > article {
+	display: grid;
+	grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+	gap: 0 clamp(1.5rem, 4vw, 3.5rem);
+	align-items: center;
+	margin-bottom: clamp(3rem, 7vw, 6rem);
+}
+
+main > article > img {
+	grid-row: span 6;
+	width: 100%;
+}
+
+main > article:nth-of-type(even) > img {
+	grid-column: 2;
+}
+
+main > article:nth-of-type(even) > :not(img) {
+	grid-column: 1;
+}
+
+main > article > :not(img) {
+	align-self: end;
+}
+
+main > article > :last-child {
+	align-self: start;
+}
+
+main > article h2 {
+	margin-bottom: 0.45em;
+}
+
+main > article h2 a {
+	text-decoration: none;
+}
+
+/* When a list item has no picture, let the words take the full width */
+
+main > article:not(:has(> img)) {
+	display: block;
+	padding: clamp(1.5rem, 4vw, 3rem);
+	background: var(--paper-deep);
+}
+
+/* Dates */
+
+time {
+	font-weight: 800;
+}
+
+main > article > time {
+	display: block;
+	margin-bottom: 0.3em;
+	font-family: var(--display);
+	font-weight: 400;
+	font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+/* The button, for tickets and big next steps */
+
+.button,
+button[type="submit"],
+input[type="submit"] {
+	display: inline-block;
+	padding: 0.7em 1.3em;
+	border: 0;
+	border-radius: 0;
+	background: var(--lantern);
+	color: var(--ink);
+	font-family: var(--display);
+	font-size: 1.1rem;
+	line-height: 1.1;
+	text-decoration: none;
+	cursor: pointer;
+	transition: transform 0.12s ease-out;
+}
+
+.button:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+	background: var(--ink);
+	color: var(--lantern);
+	transform: translateY(-2px);
+}
+
+/* A single post or event */
+
+main > figure {
+	margin: 0 0 clamp(2rem, 5vw, 4rem);
+}
+
+main > figure:empty {
+	display: none;
+}
+
+/* The home page photo runs edge to edge under the yellow */
+
+main > .hero {
+	margin-top: calc(-1 * clamp(2.5rem, 6vw, 5rem));
+	margin-inline: calc(50% - 50vw);
+}
+
+main > .hero img {
+	width: 100%;
+	height: min(70vh, 44rem);
+	object-fit: cover;
+	object-position: 50% 70%;
+}
+
+main > figure img {
+	width: 100%;
+}
+
+main:has(> figure:not(.hero)) > h1:first-child {
+	font-size: clamp(2.5rem, 7vw, 5.5rem);
+}
+
+main > div:not([class], [id]) {
+	columns: 2 22rem;
+	column-gap: clamp(2rem, 5vw, 4rem);
+}
+
+main > div:not([class], [id]) p:first-child {
+	column-span: all;
+	max-width: 46rem;
+	font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+	line-height: 1.35;
+	font-weight: 500;
+}
+
+main > h2 {
+	margin: clamp(3rem, 7vw, 5rem) 0 1.25rem;
+}
+
+main > p {
+	max-width: 46rem;
+}
+
+/* Galleries: tight rows of photos, full size on click */
+
+.cms-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.5rem;
+}
+
+.cms-gallery-item {
+	margin: 0;
+	overflow: hidden;
+}
+
+.cms-gallery-item a:hover {
+	background: none;
+}
+
+.cms-gallery-item img {
+	width: 100%;
+	transition: transform 0.25s ease-out;
+}
+
+.cms-gallery-item a:hover img {
+	transform: scale(1.04);
+}
+
+/* Forms: Total CMS draws the fields, this dresses them for the market */
+
+.totalform {
+	max-width: 42rem;
+	margin-top: 1rem;
+	--totalform-radius: 0;
+}
+
+.totalform label {
+	margin-bottom: 0.35rem;
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: var(--ink);
+}
+
+.totalform input:not([type="hidden"]),
+.totalform textarea {
+	padding: 0.8rem 0.9rem;
+	border: 3px solid var(--ink);
+	border-radius: 0;
+	background: #fff;
+	color: var(--ink);
+	font: inherit;
+	font-size: 1.1rem;
+}
+
+.totalform input:focus,
+.totalform textarea:focus {
+	border-color: var(--ink);
+	outline: 3px solid var(--lantern);
+	outline-offset: 2px;
+}
+
+.totalform .form-group-icon,
+.totalform .help,
+.totalform .cms-button::before {
+	display: none;
+}
+
+.totalform .cms-button {
+	border: 0;
+	background: var(--lantern);
+	color: var(--ink);
+	font-family: var(--display);
+	font-size: 1.25rem;
+	padding: 0.7em 1.3em;
+}
+
+.totalform .cms-button:hover {
+	border: 0;
+	background: var(--ink);
+	color: var(--lantern);
+}
+
+/* An event's schedule, set like a ticket stub */
+
+dl:not(:has(dt)) {
+	display: none;
+}
+
+dl {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 0.75rem clamp(1.75rem, 5vw, 4rem);
+	margin: 2rem 0;
+	padding: clamp(1.5rem, 5vw, 3.5rem);
+	background: var(--ink);
+	color: var(--paper);
+	font-size: clamp(1.15rem, 2.6vw, 2rem);
+	line-height: 1.25;
+}
+
+dt {
+	font-family: var(--display);
+	color: var(--lantern);
+}
+
+dd {
+	margin: 0;
+	font-weight: 700;
+}
+
+/* Footer: the name comes back, big */
+
+body > footer {
+	padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter) 2rem;
+	background: var(--ink);
+	color: var(--paper);
+}
+
+body > footer > :first-child {
+	margin: 0 0 0.3em;
+	font-family: var(--display);
+	font-size: clamp(2rem, 8.6vw, 7rem);
+	line-height: 0.95;
+	color: var(--lantern);
+}
+
+/* Honor people who ask for less motion */
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+	}
+}
+
+/* Phones */
+
+@media (max-width: 40rem) {
+	.cms-gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	main > article {
+		grid-template-columns: 1fr;
+	}
+
+	main > article > img,
+	main > article:nth-of-type(even) > img,
+	main > article:nth-of-type(even) > :not(img) {
+		grid-column: 1;
+		grid-row: auto;
+		margin-bottom: 1rem;
+	}
+
+	dl {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+
+	dd {
+		margin-bottom: 0.75rem;
+	}
+}

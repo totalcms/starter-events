@@ -1,0 +1,52 @@
+{
+    "id": "harvest-supper-on-the-row",
+    "title": "Harvest Supper on the Row",
+    "date": "2026-10-03T00:00:00+00:00",
+    "location": "Long tables, north end of the Row",
+    "poster": {
+        "alt": "A table of round crusty loaves",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "43692f66",
+        "height": 1200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "07-bread.jpg",
+        "palette": [
+            "#d9d2d5",
+            "#a06f58",
+            "#3d3733",
+            "#71584f",
+            "#c9afa6"
+        ],
+        "size": 499298,
+        "tags": [],
+        "uploadDate": "2026-11-06T07:17:00+00:00",
+        "width": 1800
+    },
+    "summary": "One long table down the middle of the street, and everything on it grown or made within ten miles. Bring a plate from home, and stay for the fiddles.",
+    "tickets": "https://tickets.example/harvest-supper",
+    "schedule": {
+        "row_1": {
+            "id": "row_1",
+            "time": "17:30",
+            "act": "Doors and cider"
+        },
+        "row_2": {
+            "id": "row_2",
+            "time": "18:30",
+            "act": "Supper is served"
+        },
+        "row_3": {
+            "id": "row_3",
+            "time": "20:00",
+            "act": "Fiddles and dishes"
+        }
+    }
+}
